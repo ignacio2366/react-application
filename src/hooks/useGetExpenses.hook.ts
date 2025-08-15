@@ -1,4 +1,4 @@
-import { getExpenses } from "@/api/expenses.api";
+import { getExpenses } from "@/services/expenses.api";
 import type { MUtableT } from "../models/mutable.type";
 import { useCallback, useEffect, useState } from "react";
 
@@ -15,7 +15,6 @@ export function useGetExpenses() {
     } catch (error) {
       setError("An error occurred while fetching data");
       setLoaded(false);
-      window.alert(error);
     }
   }, []);
 
