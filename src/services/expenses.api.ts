@@ -8,7 +8,7 @@ export async function getExpenses() {
     const response = await commonservices({ method: "GET", url: APIURL });
     return response;
   } catch (error) {
-    window.alert(error);
+    console.error(error, "API Services");
   }
 }
 export async function addExpenses(expensesform: ExpensesT) {
@@ -21,7 +21,7 @@ export async function addExpenses(expensesform: ExpensesT) {
     });
     return response;
   } catch (error) {
-    window.alert(error);
+    console.error(error, "API Services");
   }
 }
 
@@ -34,7 +34,7 @@ export async function deleteExpenses(expensesId: number) {
     });
     return response;
   } catch (error) {
-    window.alert(error);
+    console.error(error, "API Services");
   }
 }
 export async function editExpenses(expensesform: MUtableT) {
@@ -47,6 +47,6 @@ export async function editExpenses(expensesform: MUtableT) {
     });
     return response;
   } catch (error) {
-    window.alert(error);
+    console.error(error, "API Services");
   }
 }
