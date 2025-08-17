@@ -2,7 +2,7 @@ import { getExpenses } from "@/services/expenses.api";
 import type { MUtableT } from "../models/mutable.type";
 import { useCallback, useEffect, useState } from "react";
 
-export function useGetExpenses() {
+export function useGetAPI() {
   const [data, setData] = useState<MUtableT[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);

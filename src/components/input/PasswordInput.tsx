@@ -13,6 +13,7 @@ interface Props {
   ishidden?: boolean | undefined;
   value: string;
   required?: boolean | undefined;
+  error?: string | undefined;
 }
 
 export const PasswordInput = ({
@@ -24,6 +25,7 @@ export const PasswordInput = ({
   isdisabled,
   value,
   required,
+  error,
 }: Props) => {
   const [hidden, setHidden] = useState(false);
   return (
@@ -56,6 +58,7 @@ export const PasswordInput = ({
           onClick={() => setHidden(!hidden)}
         />
       </div>
+      {error && <span className="error-text">{error}</span>}
     </div>
   );
 };

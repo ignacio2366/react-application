@@ -10,6 +10,7 @@ interface Props {
   isdisabled?: boolean | undefined;
   value: string;
   required?: boolean | undefined;
+  error?: string | undefined;
 }
 
 export const TextInput = ({
@@ -22,6 +23,7 @@ export const TextInput = ({
   isdisabled,
   value,
   required,
+  error,
 }: Props) => {
   return (
     <div className="flex-col-start">
@@ -39,6 +41,7 @@ export const TextInput = ({
         disabled={isdisabled ? true : false}
         required={required}
       />
+      {error && <span className="error-text">{error}</span>}
     </div>
   );
 };

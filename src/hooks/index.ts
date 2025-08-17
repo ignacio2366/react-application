@@ -1,1 +1,1 @@
-export * from "./useGetExpenses.hook";
+export * from "./useGetAPI.hook";
